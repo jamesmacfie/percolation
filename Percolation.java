@@ -27,6 +27,10 @@ public class Percolation {
      * @param N The dimensions of the grid
      */
     public Percolation(int N) {
+        if (N <= 0) {
+            throw new java.lang.IllegalArgumentException("Woah, N must be greater than zero");
+        }
+
         grid = new WeightedQuickUnionUF(N * N + 2);
         full = new WeightedQuickUnionUF(N * N + 1);
 
