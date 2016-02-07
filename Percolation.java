@@ -1,4 +1,4 @@
-import edu.princeton.cs.algs4.*;
+import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 /**
  * Builds a N*N sized WeightedQuickUnionUF grid to mock create a simple percolation system. Initially all
@@ -150,7 +150,7 @@ public class Percolation {
     public boolean isOpen(int i, int j) {
         doOutOfBoundsCheck(i, j);
 
-        return openNodes[getSingleArrayIdx(i, j)] == true;
+        return openNodes[getSingleArrayIdx(i, j)];
     }
 
     /**
